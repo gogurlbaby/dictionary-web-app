@@ -17,10 +17,10 @@ const CardDetails = () => {
         <li className="text-[#2D2D2D] md:text-[1.125rem] text-base leading-[24px] font-normal">A component of many instruments including the piano, organ, and harpsichord consisting of usually black and white keys that cause different tones to be produced when struck.</li>
         <li className="text-[#2D2D2D] md:text-[1.125rem] text-base leading-[24px] font-normal">A device with keys of a musical keyboard, used to control electronic sound-producing devices which may be built into or separate from the keyboard device.</li>
       </ul>
-      <div className="flex gap-3 mt-[3.75rem]">
+      <div className="flex mt-[3.75rem]">
       <p className="text-[#757575] text-sm font-normal underline">Source</p>
-      <a href="/" className="text-[#2D2D2D] text-sm font-normal underline">https://en.wiktionary.org/wiki/keyboard</a>
-      <MdOpenInNew size={20} className="text-[#757575]" />
+      <a href="/" className="ml-2 text-[#2D2D2D] text-sm font-normal underline">https://en.wiktionary.org/wiki/keyboard</a>
+      <MdOpenInNew size={20} className="ml-1 text-[#757575]" />
       </div>
     </div>
   )
