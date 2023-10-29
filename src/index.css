@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,7 +13,7 @@
 body {
   width: 100%;
   height: 100vh;
-  /* font-family: "Space Mono", Arial, Helvetica, sans-serif; */
+  /* font-family: "Roboto", sans-serif; */
   background-color: #F6F8FF;
   -ms-overflow-style: none; 
   scrollbar-width: none;  
@@ -20,4 +22,10 @@ body {
 
 body::-webkit-scrollbar {
   display: none;
+}
+
+@layer base {
+  html {
+    font-family: "Roboto", sans-serif;
+  }
 }
