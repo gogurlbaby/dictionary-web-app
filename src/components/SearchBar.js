@@ -1,10 +1,13 @@
 import React, { useContext } from "react"
 import { GoSearch } from "react-icons/go"
-import { SearchContext } from "../context/SearchContext"
+import { WordContext } from "../context/SearchContext"
+import { GetThemeValues } from "../context/ThemeContext"
 
 const SearchBar = () => {
   
-  const { word, setWord, getDictionaryResults } = useContext(SearchContext)
+  const { word, setWord, getDictionaryResults } = useContext(WordContext)
+
+  const { darkTheme } = GetThemeValues()
 
   const handleSearch = () => {
     if (!word) {
@@ -22,12 +25,16 @@ const SearchBar = () => {
          name="dictionary"
          value={word}
          onChange={(e) => setWord(e.target.value)}
-        className="w-full px-6 bg-[#F4F4F4] focus:outline-none rounded-2xl md:h-16 h-12"
+        className={`${ 
+          darkTheme ? "bg-[#1F1F1F] text-white" : "bg-[#F4F4F4] text-[#2D2D2D]"} 
+          w-full px-6 focus:outline-none rounded-2xl md:h-16 h-12`}
         />
         <GoSearch 
          onClick={handleSearch}
-         size={16} 
-         className="relative right-14 md:top-6 top-4"/>
+         size={20} 
+         className={`${ 
+          darkTheme ? "text-[#A445ED]" : "text-[#2D2D2D]"} 
+          relative right-14 md:top-6 top-4`}/>
       </div>
     </div>
   )

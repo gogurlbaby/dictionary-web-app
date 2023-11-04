@@ -2,14 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import Context from './context/SearchContext';
+import ContextTheme  from './context/ThemeContext';
+import SearchContext from './context/SearchContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  
   <React.StrictMode>
-    <Context>
-      <App />
-    </Context>
+    <ContextTheme>
+      <SearchContext>
+        <App />
+      </SearchContext>
+    </ContextTheme>
   </React.StrictMode>
 );
 
