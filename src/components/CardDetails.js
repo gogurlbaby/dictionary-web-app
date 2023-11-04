@@ -5,6 +5,7 @@ import { GetThemeValues } from "../context/ThemeContext"
 
 const CardDetails = () => {
 
+  // eslint-disable-next-line
   const { darkTheme, themeHandler } = GetThemeValues() 
   
   return (
