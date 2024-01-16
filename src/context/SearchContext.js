@@ -25,8 +25,14 @@ const getDictionaryResults = async () => {
 
 
   return (
-    <WordContext.Provider value={{
-        word, setWord, results, loading, error, getDictionaryResults
+    <WordContext.Provider 
+    value={{
+        word, 
+        setWord, 
+        results, 
+        loading, 
+        error, 
+        getDictionaryResults
     }}>
         {children}
     </WordContext.Provider>

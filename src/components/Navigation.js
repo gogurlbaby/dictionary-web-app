@@ -6,7 +6,7 @@ import { GetThemeValues } from "../context/ThemeContext.js"
 const Navigation = () => {
     const [selectedOption, setSelectedOption] = useState("Sans Serif")
 
-    const options = ["Sans Serif", "Sans", "Mono"]
+    const options = [ "Sans Serif", "Sans", "Mono" ]
 
     const handleChange = (e) => {
         setSelectedOption(e.target.value)
