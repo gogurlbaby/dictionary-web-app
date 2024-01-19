@@ -22,7 +22,9 @@ const Navigation = () => {
     <div className="flex gap-8">
     <div className="relative inline-block">
        <select
-        className="inline-block bg-transparent px-2 py-1 pr-3 leading-tight focus:outline-none "
+        className={`${
+          darkTheme ? "text-[#A445ED]" : "text-[#2D2D2D]"}
+          inline-block bg-transparent px-2 py-1 pr-3 leading-tight focus:outline-none`}
         value={selectedOption}
         onChange={handleChange}
        >
@@ -30,10 +32,8 @@ const Navigation = () => {
             <option 
              key={index} 
              value={option} 
-             className={`${ 
-              darkTheme ? " text-[#FFF]" : " text-[#2D2D2D]"} 
-              py-8 px-10 md:text-[18px] text-[14px] font-bold`}>
-                {option}
+             className="py-8 px-10 md:text-[18px] text-[14px] font-bold">
+              {option}
             </option>
         ))}
        </select>

@@ -10,12 +10,14 @@ const SearchBar = () => {
   const { darkTheme } = GetThemeValues()
 
   const handleSearch = () => {
+    console.log("Handling search...");
     if (!word) {
-      alert("Enter a word")
+        alert("Enter a word");
+        console.log("Word is empty");
     } else {
-      getDictionaryResults()
+        getDictionaryResults();
     }
-  }
+};
 
   return (
     <div className="md:mt-[3.25rem] mt-[1.75rem]">

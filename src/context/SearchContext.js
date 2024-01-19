@@ -11,11 +11,11 @@ const SearchContext = ({children}) => {
 const getDictionaryResults = async () => {
     try {
         setLoading(true);
-        const response = await axios.get(`https://dictionaryapi.dev/${word}`)
+        const response = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
         const data = await response.data;
         console.log("data", data);
         setLoading(false);
-        setResults(data[0]);
+        setResults(data);
     } catch (error) {
         setError("No result", error);
     } finally {
